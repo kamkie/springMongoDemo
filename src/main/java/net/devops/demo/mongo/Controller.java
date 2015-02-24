@@ -38,10 +38,10 @@ public class Controller {
     public List<Model> update() {
         List<Model> models = modelRepository.findAll();
 
-        models.parallelStream().forEach(model -> {
-            model.setLastName(model.getLastName() + "adsad");
-            model.setFirstName(model.getFirstName() + "uhbed");
-            model.setSecondName(model.getSecondName() + "mnbvc");
+        models.stream().forEach(model -> {
+            model.setFirstName("first" + "uhbed");
+            model.setSecondName("second" + "mnbvc");
+            model.setLastName("last" + "adsad");
             model.setSocialNumber(model.getSocialNumber() + 1);
 
             modelRepository.save(model);
