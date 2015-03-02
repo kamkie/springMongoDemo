@@ -22,6 +22,7 @@ public class MongoConfiguration extends AbstractMongoConfiguration {
     }
 
     @Override
+    @Bean
     public Mongo mongo() throws Exception {
         return new MongoClient();
     }
